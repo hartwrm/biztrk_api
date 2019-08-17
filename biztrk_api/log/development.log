@@ -1,0 +1,66 @@
+  [1m[35m (408.0ms)[0m  [1m[35mCREATE DATABASE "biztrk_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (297.0ms)[0m  [1m[35mCREATE DATABASE "biztrk_api_test" ENCODING = 'unicode'[0m
+  [1m[35m (10.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1301990701817916705)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCompanies (20190817035525)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "companies" ("id" bigserial primary key, "name" character varying, "industry" character varying, "open" float, "close" float, "notes" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (2.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190817035525"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-08-17 03:58:05.529980"], ["updated_at", "2019-08-17 03:58:05.529980"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1301990701817916705)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCompany Create (2.6ms)[0m  [1m[32mINSERT INTO "companies" ("name", "industry", "open", "close", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lueilwitz-Schamberger"], ["industry", "Philanthropy"], ["open", 44.37], ["close", 12.88], ["notes", "morph viral metrics"], ["created_at", "2019-08-17 04:05:29.008680"], ["updated_at", "2019-08-17 04:05:29.008680"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCompany Create (0.3ms)[0m  [1m[32mINSERT INTO "companies" ("name", "industry", "open", "close", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Stiedemann Group"], ["industry", "Legislative Office"], ["open", 71.19], ["close", 12.9], ["notes", "unleash synergistic eyeballs"], ["created_at", "2019-08-17 04:05:29.016606"], ["updated_at", "2019-08-17 04:05:29.016606"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCompany Create (0.3ms)[0m  [1m[32mINSERT INTO "companies" ("name", "industry", "open", "close", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Bauch-Brown"], ["industry", "Logistics and Supply Chain"], ["open", 15.44], ["close", 85.45], ["notes", "monetize next-generation models"], ["created_at", "2019-08-17 04:05:29.020565"], ["updated_at", "2019-08-17 04:05:29.020565"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCompany Create (0.3ms)[0m  [1m[32mINSERT INTO "companies" ("name", "industry", "open", "close", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Effertz, Smith and Bosco"], ["industry", "Printing"], ["open", 72.61], ["close", 32.16], ["notes", "unleash front-end applications"], ["created_at", "2019-08-17 04:05:29.024649"], ["updated_at", "2019-08-17 04:05:29.024649"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCompany Create (0.3ms)[0m  [1m[32mINSERT INTO "companies" ("name", "industry", "open", "close", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Johnston-Hyatt"], ["industry", "Supermarkets"], ["open", 53.23], ["close", 24.73], ["notes", "optimize out-of-the-box systems"], ["created_at", "2019-08-17 04:05:29.028754"], ["updated_at", "2019-08-17 04:05:29.028754"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCompany Create (0.3ms)[0m  [1m[32mINSERT INTO "companies" ("name", "industry", "open", "close", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Schowalter Inc"], ["industry", "Sports"], ["open", 51.53], ["close", 88.52], ["notes", "exploit holistic systems"], ["created_at", "2019-08-17 04:05:29.032842"], ["updated_at", "2019-08-17 04:05:29.032842"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCompany Create (0.3ms)[0m  [1m[32mINSERT INTO "companies" ("name", "industry", "open", "close", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Fahey, King and Yost"], ["industry", "Alternative Dispute Resolution"], ["open", 76.31], ["close", 44.09], ["notes", "transition global markets"], ["created_at", "2019-08-17 04:05:29.036892"], ["updated_at", "2019-08-17 04:05:29.036892"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCompany Create (0.3ms)[0m  [1m[32mINSERT INTO "companies" ("name", "industry", "open", "close", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Muller-White"], ["industry", "Photography"], ["open", 98.26], ["close", 34.51], ["notes", "enhance extensible partnerships"], ["created_at", "2019-08-17 04:05:29.041115"], ["updated_at", "2019-08-17 04:05:29.041115"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCompany Create (0.3ms)[0m  [1m[32mINSERT INTO "companies" ("name", "industry", "open", "close", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Hamill, Ferry and Borer"], ["industry", "Political Organization"], ["open", 60.42], ["close", 30.73], ["notes", "disintermediate out-of-the-box e-markets"], ["created_at", "2019-08-17 04:05:29.045078"], ["updated_at", "2019-08-17 04:05:29.045078"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCompany Create (0.3ms)[0m  [1m[32mINSERT INTO "companies" ("name", "industry", "open", "close", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Murazik Group"], ["industry", "Medical Devices"], ["open", 54.13], ["close", 34.91], ["notes", "reinvent holistic communities"], ["created_at", "2019-08-17 04:05:29.050185"], ["updated_at", "2019-08-17 04:05:29.050185"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/companies" for ::1 at 2019-08-17 00:05:55 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CompaniesController#index as */*
+  [1m[36mCompany Load (0.6ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/controllers/companies_controller.rb:8:in `index'
+Completed 200 OK in 18ms (Views: 11.9ms | ActiveRecord: 4.3ms | Allocations: 9010)
+
+
+Started GET "/companies/3" for ::1 at 2019-08-17 00:06:19 -0400
+Processing by CompaniesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mCompany Load (0.5ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/companies_controller.rb:44:in `set_company'
+Completed 200 OK in 20ms (Views: 0.6ms | ActiveRecord: 1.2ms | Allocations: 4632)
+
+

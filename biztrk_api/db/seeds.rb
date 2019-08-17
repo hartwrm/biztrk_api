@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+10.times do
+  Company.create(
+    name: Faker::Company.name,
+    industry: Faker::Company.industry,
+    open: Faker::Commerce.price,
+    close: Faker::Commerce.price,
+    notes: Faker::Company.bs
+  )
+end
+
+p "seeded db"
