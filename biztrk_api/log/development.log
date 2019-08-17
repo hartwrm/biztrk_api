@@ -71,3 +71,116 @@ Processing by CompaniesController#index as */*
 Completed 200 OK in 26ms (Views: 21.0ms | ActiveRecord: 1.2ms | Allocations: 2506)
 
 
+Started GET "/companies" for ::1 at 2019-08-17 00:24:08 -0400
+Processing by CompaniesController#index as */*
+  [1m[36mCompany Load (2.2ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/controllers/companies_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 2.2ms | Allocations: 2603)
+
+
+Started GET "/companies" for ::1 at 2019-08-17 00:24:25 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CompaniesController#index as */*
+  [1m[36mCompany Load (0.6ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/controllers/companies_controller.rb:8:in `index'
+Completed 200 OK in 18ms (Views: 11.6ms | ActiveRecord: 4.6ms | Allocations: 9011)
+
+
+Started GET "/companies" for ::1 at 2019-08-17 00:31:08 -0400
+Processing by CompaniesController#index as */*
+  [1m[36mCompany Load (1.3ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/controllers/companies_controller.rb:8:in `index'
+Completed 200 OK in 21ms (Views: 15.6ms | ActiveRecord: 1.3ms | Allocations: 2615)
+
+
+Started GET "/companies" for ::1 at 2019-08-17 00:31:28 -0400
+Processing by CompaniesController#index as */*
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/controllers/companies_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.4ms | Allocations: 2507)
+
+
+Started GET "/companies" for ::1 at 2019-08-17 00:31:35 -0400
+Processing by CompaniesController#index as */*
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/controllers/companies_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.4ms | Allocations: 2507)
+
+
+Started GET "/companies" for ::1 at 2019-08-17 00:31:39 -0400
+Processing by CompaniesController#index as */*
+  [1m[36mCompany Load (0.7ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/controllers/companies_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.7ms | Allocations: 2507)
+
+
+Started GET "/companies" for ::1 at 2019-08-17 01:03:21 -0400
+Processing by CompaniesController#index as */*
+  [1m[36mCompany Load (2.5ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/controllers/companies_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 2.5ms | Allocations: 2604)
+
+
+Started POST "/companies" for ::1 at 2019-08-17 01:03:50 -0400
+Processing by CompaniesController#create as HTML
+  Parameters: {"company"=>{}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 147)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: company):
+  
+app/controllers/companies_controller.rb:49:in `company_params'
+app/controllers/companies_controller.rb:18:in `create'
+Started GET "/companies" for ::1 at 2019-08-17 01:03:56 -0400
+Processing by CompaniesController#index as */*
+  [1m[36mCompany Load (0.5ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/controllers/companies_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.5ms | Allocations: 2527)
+
+
+Started GET "/companies" for ::1 at 2019-08-17 01:04:16 -0400
+Processing by CompaniesController#index as */*
+  [1m[36mCompany Load (0.6ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/controllers/companies_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 0.6ms | Allocations: 2492)
+
+
+  [1m[36mCompany Load (0.5ms)[0m  [1m[34mSELECT "companies".* FROM "companies" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/companies" for ::1 at 2019-08-17 01:05:43 -0400
+Processing by CompaniesController#create as HTML
+  Parameters: {"company"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 140)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: company):
+  
+app/controllers/companies_controller.rb:49:in `company_params'
+app/controllers/companies_controller.rb:18:in `create'
+Started GET "/companies" for ::1 at 2019-08-17 01:07:18 -0400
+Processing by CompaniesController#index as */*
+  [1m[36mCompany Load (0.7ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/controllers/companies_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.7ms | Allocations: 2491)
+
+
+Started POST "/companies" for ::1 at 2019-08-17 01:07:33 -0400
+Processing by CompaniesController#create as HTML
+  Parameters: {"name"=>"Apple", "industry"=>"Tech", "open"=>"154", "close"=>"300", "notes"=>"Buy ", "company"=>{"name"=>"Apple", "industry"=>"Tech", "open"=>"154", "close"=>"300", "notes"=>"Buy "}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/companies_controller.rb:20:in `create'
+  [1m[36mCompany Create (2.6ms)[0m  [1m[32mINSERT INTO "companies" ("name", "industry", "open", "close", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Apple"], ["industry", "Tech"], ["open", 154.0], ["close", 300.0], ["notes", "Buy "], ["created_at", "2019-08-17 05:07:33.741015"], ["updated_at", "2019-08-17 05:07:33.741015"]]
+  ↳ app/controllers/companies_controller.rb:20:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/companies_controller.rb:20:in `create'
+Completed 201 Created in 13ms (Views: 1.4ms | ActiveRecord: 3.4ms | Allocations: 2841)
+
+
+Started GET "/companies" for ::1 at 2019-08-17 01:07:47 -0400
+Processing by CompaniesController#index as */*
+  [1m[36mCompany Load (1.2ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  ↳ app/controllers/companies_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 1.2ms | Allocations: 2657)
+
+
